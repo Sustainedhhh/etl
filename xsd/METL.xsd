@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ETL">
+		<xs:annotation>
+			<xs:documentation>ETL Root Element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Declartion"/>
+				<xs:element name="Operations">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Process" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Process">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Database" minOccurs="0"/>
+				<xs:element ref="SOAPWebservice" minOccurs="0"/>
+				<xs:element ref="RESTfulWebservice" minOccurs="0"/>
+				<xs:element ref="CSV" minOccurs="0"/>
+				<xs:element ref="File" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Database">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sql" type="xs:string"/>
+				<xs:element ref="Process" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="id" use="required"/>
+			<xs:attribute name="connection-id" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SOAPWebservice">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="Process" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RESTfulWebservice">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="URL"/>
+				<xs:element name="Input"/>
+				<xs:element ref="Process" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="id" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CSV">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element name="URL"/>
+				<xs:element ref="Process" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="id"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FlatFile"/>
+	<xs:element name="Declartion">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Properties" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Property-File" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="id" use="required"/>
+									<xs:attribute name="path" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Connections" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Connection" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PropertyFile"/>
+	<xs:element name="File">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element name="URL"/>
+				<xs:element ref="Process" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="id"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Connection">
+		<xs:complexType>
+			<xs:attribute name="id" use="required"/>
+			<xs:attribute name="username" use="required"/>
+			<xs:attribute name="password" use="required"/>
+			<xs:attribute name="url" use="required"/>
+			<xs:attribute name="driver" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

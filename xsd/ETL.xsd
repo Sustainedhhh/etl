@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by TEAM ViRiLiTY (VRL) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="property">
+		<xs:complexType>
+			<xs:attribute name="id"/>
+			<xs:attribute name="path"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="etl">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="property" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="database" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="query" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="database">
+		<xs:complexType>
+			<xs:attribute name="id"/>
+			<xs:attribute name="username"/>
+			<xs:attribute name="password"/>
+			<xs:attribute name="driver"/>
+			<xs:attribute name="url"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="onError">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="rollback"/>
+			<xs:enumeration value="continue"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="query">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sql" type="xs:string"/>
+				<xs:element ref="query" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="onError" type="onError"/>
+			<xs:attribute name="id"/>
+			<xs:attribute name="database"/>
+			<xs:attribute name="interval"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

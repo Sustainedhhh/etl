@@ -23,9 +23,9 @@ ali.mohammad@fcih.net
 
 
 ## TODO
-1. Add SOAP Webservice.
-2. Add RESTful Webservice.
-3. Add UI to handle the etl proceess.
+* Add SOAP Webservice.
+* Add RESTful Webservice.
+* Add UI to handle the etl proceess.
 
 
 ## License

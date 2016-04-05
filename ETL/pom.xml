@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ETL</groupId>
+  <artifactId>ETL</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Extract Transform Load</name>
+  <description>Project to implement ETL (Extract, Transform and Load) concept with JAVA The idea in a simple way, we want to create processes which allow multiple sub-processes with input (database query, SOAP webservice, RESTful webservice, CSV file or flat files)</description>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>xsd</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <url>https://github.com/ahelmy/etl</url>
+  <dependencies>
+  	<dependency>
+  		<groupId>log4j</groupId>
+  		<artifactId>log4j</artifactId>
+  		<version>1.2.12</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>net.sourceforge.jtds</groupId>
+  		<artifactId>jtds</artifactId>
+  		<version>1.2.6</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.json</groupId>
+  		<artifactId>json</artifactId>
+  		<version>20090211</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>3.8.2</version>
+  		<scope>test</scope>
+  	</dependency>
+  	
+  	<dependency>
+	<groupId>org.xerial</groupId>
+	<artifactId>sqlite-jdbc</artifactId>
+	<version>3.8.11.2</version>
+</dependency>
+  	
+  </dependencies>
+</project>

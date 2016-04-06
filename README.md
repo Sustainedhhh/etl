@@ -35,9 +35,9 @@ If anyone with JAVA knoweledge would like to participate, please drop me an e-ma
 
 ## TODO
 
-Add SOAP Webservice.
-Add RESTful Webservice.
-Add UI to handle the etl proceess.
+- [x] Add RESTful Webservice.
+- [ ] Add SOAP Webservice.
+- [ ] Add UI to handle the etl proceess.
 
 ## License
 

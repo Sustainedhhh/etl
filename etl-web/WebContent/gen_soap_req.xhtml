@@ -1,0 +1,61 @@
+<ui:composition template="/WEB-INF/template/MasterPage.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+	<ui:define name="title">
+       ETL
+    </ui:define>
+	<ui:define name="content">
+		<h:form prependId="false" id="form">
+			<p:growl id="messages" showSummary="false" showDetail="true"
+				autoUpdate="true" life="3000" />
+			<p:panelGrid>
+				<p:row>
+					<p:column>
+						<h:outputLabel value="WSDL URL" />
+						<p:spacer width="10" />
+						<p:inputText value="#{soapBean.wsdl}" title="WSDL URL"
+							style="width:400px" />
+						<p:spacer width="20" />
+						<p:commandButton value="Generate"
+							actionListener="#{soapBean.generate}" process="@all"
+							update="codeMirrorList,errorBox">
+						</p:commandButton>
+					</p:column>
+				</p:row>
+			</p:panelGrid>
+
+			<h:panelGroup id="codeMirrorList" layout="block">
+
+				<c:forEach items="#{soapBean.requests}" var="req">
+					<p:panel header="#{req.key}" toggleable="true">
+						<p:fieldset legend="Request" toggleable="true">
+							<pe:codeMirror id="#{req.key}" label="#{req.key}" mode="xml"
+								theme="eclipse" value="#{req.value[0]}" lineNumbers="true" />
+						</p:fieldset>
+						<p:fieldset legend="Response" toggleable="true">
+							<pe:codeMirror id="#{req.key}1" label="#{req.key}" mode="xml"
+								theme="eclipse" value="#{req.value[1]}" lineNumbers="true" />
+						</p:fieldset>
+					</p:panel>
+					<h:panelGroup layout="block" styleClass="clear" />
+				</c:forEach>
+			</h:panelGroup>
+			<h:panelGroup id="errorBox" layout="block">
+				<h:panelGroup id="errorMessage" rendered="#{soapBean.error}">
+					<h:panelGroup>#{soapBean.errorMessage}</h:panelGroup>
+				</h:panelGroup>
+			</h:panelGroup>
+			<div class="clear" />
+			<h:panelGroup style="display:none">
+				<pe:codeMirror id="d1" mode="xml" theme="eclipse" value="Ignore"
+					lineNumbers="true" />
+			</h:panelGroup>
+		</h:form>
+	</ui:define>
+</ui:composition>

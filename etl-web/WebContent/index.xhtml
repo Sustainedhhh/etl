@@ -1,0 +1,35 @@
+<ui:composition template="/WEB-INF/template/MasterPage.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+	<ui:define name="title">
+       ETL
+    </ui:define>
+	<ui:define name="content">
+		<h:form prependId="false" id="form">
+			<p:growl id="messages" showSummary="false" showDetail="true"
+				autoUpdate="true" life="3000" />
+			<p:panel header="ETL Executer">
+				<pe:codeMirror id="codeMirror" mode="xml" widgetVar="etlCode"
+					theme="eclipse" value="#{etlBean.content}"
+					completeMethod="#{etlBean.complete}"
+					extraKeys="{ 'Ctrl-Space': function(cm) { PF('etlCode').complete(); }}"
+					lineNumbers="true" />
+			</p:panel>
+			<p:separator/>
+			<p:commandButton value="Execute" actionListener="#{etlBean.execute}"
+				process="@all" update="codeMirror,errorBox">
+			</p:commandButton>
+			<p:spacer height="10" />
+			<h:panelGroup id="errorBox" layout="block">
+				<h:panelGroup id="errorMessage" rendered="#{etlBean.error}">
+					<h:panelGroup style="color:red;">#{etlBean.errorMessage}</h:panelGroup>
+				</h:panelGroup>
+			</h:panelGroup>
+		</h:form>
+	</ui:define>
+</ui:composition>

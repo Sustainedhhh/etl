@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ETL xsi:noNamespaceSchemaLocation="../xsd/ETL.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Declartion>
+		<Connections>
+			<Connection url="jdbc:sqlite:G:\outside-the-box\github\etl\etl\src\test\java\ETL.db" id="etl"
+				username="" password="" driver="org.sqlite.JDBC" />
+		</Connections>
+	</Declartion>
+	<Process id="proc1">
+				<SOAPWebservice id="s1">
+					<URL>http://www.dneonline.com/calculator.asmx</URL>
+					<Action>http://tempuri.org/Add</Action>
+					<Input><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>]]></Input>
+					<Process id="proc1-child2">
+						<Database connection-id="etl" id="d2">
+						<sql>INSERT INTO Employee(EMP_ID, NAME) VALUES(1, '?s1./AddResponse/AddResult')</sql>
+						</Database>
+					</Process>
+				</SOAPWebservice>
+	</Process>
+</ETL>

@@ -1,25 +1,98 @@
-[]=>[2016-04-05 11:18:39] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
-[]=>[2016-04-05 11:18:39] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been unmarshaled.
-[]=>[2016-04-05 11:18:39] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Loading <property> from xml...
-[]=>[2016-04-05 11:18:39] [DEBUG] [com.outsidethebox.etl.ETL.loadProperties] - Loaded [0] <property>
-[]=>[2016-04-05 11:18:39] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Loading <database> from xml...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.loadDatabases] - Loaded [1] <database>
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.processIterator] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Ali</Name></Employee><Employee><ID>2</ID><Name>Mohammad</Name></Employee><Employee><ID>3</ID><Name>Helmy</Name></Employee><Employee><ID>4</ID><Name>Omar</Name></Employee></Employees>
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
-[/Employees/Employee/ID='1', /Employees/Employee/Name='Ali', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Mohammad', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Helmy', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Omar']
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.processIterator] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')] Process :=>[]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(1, 'Ali')]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.processIterator] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')] Process :=>[]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(2, 'Mohammad')]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.processIterator] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')] Process :=>[]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(3, 'Helmy')]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.processIterator] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')] Process :=>[]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(4, 'Omar')]...
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
-[]=>[2016-04-05 11:18:40] [DEBUG] [com.outsidethebox.etl.ETL.processIterator] - RESTfulWebservice ID[r1] Executed.
+[]=>[2016-04-15 15:02:50] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[http://www.dneonline.com/calculator.asmx], Input[<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>], Action[http://tempuri.org/Add], Input[<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>]...
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://www.dneonline.com/calculator.asmx
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://www.dneonline.com/calculator.asmx
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP Action : http://tempuri.org/Add
+[]=>[2016-04-15 15:02:51] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP Action : http://tempuri.org/Add
+[]=>[2016-04-15 15:02:56] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>
+[]=>[2016-04-15 15:02:57] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>
+[]=>[2016-04-15 15:03:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><AddResponse xmlns="http://tempuri.org/"><AddResult>11</AddResult></AddResponse></soap:Body></soap:Envelope>
+[]=>[2016-04-15 15:03:17] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soap:Envelope/soap:Body/AddResponse/AddResult='11']
+[]=>[2016-04-15 15:04:42] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[http://www.dneonline.com/calculator.asmx], Input[<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>], Action[http://tempuri.org/Add], Input[<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>]...
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://www.dneonline.com/calculator.asmx
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://www.dneonline.com/calculator.asmx
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP Action : http://tempuri.org/Add
+[]=>[2016-04-15 15:04:43] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP Action : http://tempuri.org/Add
+[]=>[2016-04-15 15:04:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>
+[]=>[2016-04-15 15:04:48] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>5</intA>
+      <intB>6</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>
+[]=>[2016-04-15 15:04:51] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><AddResponse xmlns="http://tempuri.org/"><AddResult>11</AddResult></AddResponse></soap:Body></soap:Envelope>
+[]=>[2016-04-15 15:04:53] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soap:Envelope/soap:Body/AddResponse/AddResult='11']

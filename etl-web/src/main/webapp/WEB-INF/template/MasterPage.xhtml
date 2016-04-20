@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
+	<link type="image/x-icon"
+		href="#{facesContext.externalContext.requestContextPath}/javax.faces.resource/favicon.ico.xhtml?ln=images"
+		rel="shortcut icon" />
+	<h:outputStylesheet name="layout.css" library="css" />
+	<h:outputStylesheet name="grid.css" library="css" />
+	<h:outputStylesheet name="nav.css" library="css" />
+	<h:outputStylesheet name="reset.css" library="css" />
+	<h:outputStylesheet name="text.css" library="css" />
+	<title><ui:insert name="title">
+		</ui:insert></title>
+</h:head>
+
+
+
+<h:body>
+
+	<div class="container_16">
+
+		<div class="grid_16">
+			<h1 id="branding">Welcome to ETL system</h1>
+		</div>
+		<div class="clear"></div>
+		<div class="grid_16">
+			<ul class="nav main">
+				<li><a href="#">ETL</a>
+					<ul>
+						<li><a href="index.xhtml">Execute</a></li>
+						<li><a href="gen_soap_req.xhtml">Generate SOAP Request</a></li>
+					</ul></li>
+				<li class="secondary"><a href="http://960.gs/"
+					title="960.gs | A CSS grid system developed by Nathan Smith">The
+						960 Grid System</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="grid_16">
+			<h2 id="page-heading">Extract, Transofrm and Load</h2>
+		</div>
+		<div class="clear"></div>
+		<div class="grid_16">
+			<ui:insert name="content">
+				<ui:include src="Content.xhtml" />
+			</ui:insert>
+		</div>
+		<div class="clear" style="height: 50px;"></div>
+	</div>
+
+</h:body>
+</html>

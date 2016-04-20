@@ -1,0 +1,947 @@
+[]=>[2016-04-07 12:11:08] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.loadDeclarations] - Loading <property> from xml...
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.loadProperties] - Loaded [0] <property>
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.loadDeclarations] - Loading <database> from xml...
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.loadDatabases] - Loaded [1] <database>
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 12:11:09] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 12:11:57] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.loadDeclarations] - Loading <property> from xml...
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.loadProperties] - Loaded [0] <property>
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.loadDeclarations] - Loading <database> from xml...
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.loadDatabases] - Loaded [1] <database>
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(1, 'Employee1')]...
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>]...
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:58] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(2, 'Employee2')]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(3, 'Employee3')]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(4, 'Employee4')]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>]...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">   <soapenv:Header/>   <soapenv:Body>      <api:id>3</api:id>   </soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - RESTfulWebservice ID[r1] Executed.
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connections...
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connection[etl]
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connection[etl] Closed
+[]=>[2016-04-07 12:11:59] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connections closed.
+[]=>[2016-04-07 13:21:30] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 13:21:30] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 13:21:30] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 13:21:30] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [null] properties
+[]=>[2016-04-07 13:22:45] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 13:22:45] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [{}] properties
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(1, 'Employee1')]...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(2, 'Employee2')]...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:22:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(3, 'Employee3')]...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(4, 'Employee4')]...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - RESTfulWebservice ID[r1] Executed.
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connections...
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connection[etl]
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connection[etl] Closed
+[]=>[2016-04-07 13:22:47] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connections closed.
+[]=>[2016-04-07 13:25:36] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 13:25:36] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 13:25:36] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 13:25:36] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 13:25:36] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [{etl=org.sqlite.SQLiteConnection@5773ec72}] database connections
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(1, 'Employee1')]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(2, 'Employee2')]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(3, 'Employee3')]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(4, 'Employee4')]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - RESTfulWebservice ID[r1] Executed.
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connections...
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connection[etl]
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connection[etl] Closed
+[]=>[2016-04-07 13:25:37] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connections closed.
+[]=>[2016-04-07 14:00:49] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:00:50] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:01:18] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:01:19] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:01:19] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:01:19] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:01:19] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:01:19] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:01:19] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:01:19] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:01:19] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:01:22] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:03:19] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:03:19] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(1, 'Employee1')]...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:03:20] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(2, 'Employee2')]...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(3, 'Employee3')]...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(4, 'Employee4')]...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>]...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - RESTfulWebservice ID[r1] Executed.
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connections...
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connection[etl]
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connection[etl] Closed
+[]=>[2016-04-07 14:03:21] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connections closed.
+[]=>[2016-04-07 14:04:45] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:04:45] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:04:45] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:04:45] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:04:45] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(1, 'Employee1')]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(2, 'Employee2')]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(3, 'Employee3')]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(4, 'Employee4')]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - RESTfulWebservice ID[r1] Executed.
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connections...
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connection[etl]
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connection[etl] Closed
+[]=>[2016-04-07 14:04:46] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connections closed.
+[]=>[2016-04-07 14:07:35] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:07:35] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:07:35] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:07:35] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:07:35] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(1, 'Employee1')]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : {file(./Test/SOAP.xml)}
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(2, 'Employee2')]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : {file(./Test/SOAP.xml)}
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(3, 'Employee3')]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : {file(./Test/SOAP.xml)}
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(4, 'Employee4')]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : {file(./Test/SOAP.xml)}
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - RESTfulWebservice ID[r1] Executed.
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connections...
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connection[etl]
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connection[etl] Closed
+[]=>[2016-04-07 14:07:36] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connections closed.
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 14:19:48] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:21:23] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 14:21:24] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 14:21:24] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:22:22] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:22:23] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:22:31] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 14:22:31] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 14:22:31] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Employees><Employee><ID>1</ID><Name>Employee1</Name></Employee><Employee><ID>2</ID><Name>Employee2</Name></Employee><Employee><ID>3</ID><Name>Employee3</Name></Employee><Employee><ID>4</ID><Name>Employee4</Name></Employee></Employees>
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [true]
+[/Employees/Employee/ID='1', /Employees/Employee/Name='Employee1', /Employees/Employee[2]/ID='2', /Employees/Employee[2]/Name='Employee2', /Employees/Employee[3]/ID='3', /Employees/Employee[3]/Name='Employee3', /Employees/Employee[4]/ID='4', /Employees/Employee[4]/Name='Employee4']
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(1, 'Employee1')]...
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : {file(./Test/SOAP.xml)}
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:25:02] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(2, 'Employee2')]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : {file(./Test/SOAP.xml)}
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(3, 'Employee3')]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : {file(./Test/SOAP.xml)}
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d1] Connection-ID[etl] SQL[INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [INSERT INTO Employee(EMP_ID, NAME) VALUES(4, 'Employee4')]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing SOAPWebservice ID[s1], URL[null], Input[{file(./Test/SOAP.xml)}], Action[http://localhost:8080/Company/services/EmployeeSOAP
+					], Input[{file(./Test/SOAP.xml)}]...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] SOAP URL : http://localhost:8080/Company/services/EmployeeSOAP
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] Input : {file(./Test/SOAP.xml)}
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] Input : <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output : <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getEmployeeReturn xmlns="http://api.rest.etl.com"><id>4</id><name>Employee4</name></getEmployeeReturn></soapenv:Body></soapenv:Envelope>
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Output-XML [false]
+[/soapenv:Envelope/soapenv:Body/getEmployeeReturn/id='4', /soapenv:Envelope/soapenv:Body/getEmployeeReturn/name='Employee4']
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing Database ID[d2] Connection-ID[etl] SQL[SELECT ?s1./id , '?s1./name']...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - Executing SQL [SELECT 4 , 'Employee4']...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.execute] - SQL executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - SOAPWebService ID[s1] Executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - RESTfulWebservice ID[r1] Executed.
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connections...
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Closing database connection[etl]
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connection[etl] Closed
+[]=>[2016-04-07 14:25:03] [DEBUG] [com.outsidethebox.etl.ETL.closeConnections] - Database connections closed.

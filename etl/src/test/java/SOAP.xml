@@ -1,0 +1,6 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.rest.etl.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <api:id>3</api:id>
+   </soapenv:Body>
+</soapenv:Envelope>

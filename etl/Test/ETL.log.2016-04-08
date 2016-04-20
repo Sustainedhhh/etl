@@ -1,0 +1,50 @@
+[]=>[2016-04-08 13:23:08] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-08 13:23:08] [ERROR] [com.outsidethebox.etl.ETL.validateAgainstXSD] - Validation error
+org.xml.sax.SAXParseException; schema_reference.4: Failed to read schema document 'null', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.traversers.XSDHandler.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.traversers.XSDHandler.getSchemaDocument1(Unknown Source)
+	at org.apache.xerces.impl.xs.traversers.XSDHandler.getSchemaDocument(Unknown Source)
+	at org.apache.xerces.impl.xs.traversers.XSDHandler.parseSchema(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaLoader.loadSchema(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaLoader.loadGrammar(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaLoader.loadGrammar(Unknown Source)
+	at org.apache.xerces.jaxp.validation.XMLSchemaFactory.newSchema(Unknown Source)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at com.outsidethebox.etl.ETL.validateAgainstXSD(ETL.java:95)
+	at com.outsidethebox.etl.ETL.init(ETL.java:75)
+	at com.outsidethebox.etl.ETL.<init>(ETL.java:62)
+	at com.outsidethebox.etl.ETLtest.testExecute(ETLtest.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+[]=>[2016-04-08 13:23:08] [ERROR] [com.outsidethebox.etl.ETL.init] - ETL xml file is not valid against schema 'ETL.xsd'
+[]=>[2016-04-08 13:24:12] [DEBUG] [com.outsidethebox.etl.ETL.init] - Validating ETL xml...
+[]=>[2016-04-08 13:24:12] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL xml file has been validated.
+[]=>[2016-04-08 13:24:12] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loading properties...
+[]=>[2016-04-08 13:24:13] [DEBUG] [com.outsidethebox.etl.ETL.initProperties] - Loaded [0] properties
+[]=>[2016-04-08 13:24:13] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loading database connections...
+[]=>[2016-04-08 13:24:13] [DEBUG] [com.outsidethebox.etl.ETL.initDBConnections] - Loaded [1] database connections
+[]=>[2016-04-08 13:24:13] [DEBUG] [com.outsidethebox.etl.ETL.init] - ETL object has been parsed.
+[]=>[2016-04-08 13:24:13] [DEBUG] [com.outsidethebox.etl.ETL.iterateProcess] - Executing RESFulWebservice ID[r1], URL[http://localhost:8080/Company/api/Employee], Input[null], Accpet[application/*], Content-Type[application/xml]...
+[]=>[2016-04-08 13:24:13] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [RAW] REST URL : http://localhost:8080/Company/api/Employee
+[]=>[2016-04-08 13:24:13] [DEBUG] [com.outsidethebox.etl.ETL.execute] - [GEN] REST URL : http://localhost:8080/Company/api/Employee

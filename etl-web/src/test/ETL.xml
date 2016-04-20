@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ETL xsi:noNamespaceSchemaLocation="../xsd/ETL.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Declartion>
+		<Connections>
+			<Connection url="jdbc:sqlite:G:\outside-the-box\github\etl\etl.web\src\test\ETL.db" id="etl"
+				username="" password="" driver="org.sqlite.JDBC" />
+		</Connections>
+	</Declartion>
+	<Process id="proc1">
+		<RESTfulWebservice id="r1">
+			<URL>http://localhost:8080/api/Employee</URL>
+			<Method>GET</Method>
+			<Process id="proc1-child1">
+				<Database id="d1" connection-id="etl">
+					<sql>INSERT INTO Employee(EMP_ID, NAME) VALUES(?r1./Employees/Employee/ID, '?r1./Employees/Employee/Name')</sql>
+				</Database>
+				<SOAPWebservice id="s1">
+					<Action>http://localhost:8080/Company/services/EmployeeSOAP
+					</Action>
+					<Input>{file(./Test/SOAP.xml)}</Input>
+					<Process id="proc1-child2">
+						<Database connection-id="etl" id="d2">
+						<sql>SELECT ?s1./id , '?s1./name'</sql>
+						</Database>
+					</Process>
+				</SOAPWebservice>
+			</Process>
+		</RESTfulWebservice>
+	</Process>
+</ETL>

@@ -1,0 +1,36 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"   
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"    
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:form id="adminForm" prependId="false" >
+        <p:toolbar style="font-size: 12px;">  
+
+            <p:toolbarGroup align="left">  
+                <c:if test="#{accountBean.account.role eq 'Administrator'}">
+                    <p:commandButton  value="Accounts" action="/Admin/Accounts?faces-redirect=true" ajax="false"/>
+                    <p:separator /> 
+                    <p:commandButton value="Countries" action="/Admin/Countries?faces-redirect=true" ajax="false"/>
+                    <p:separator /> 
+                    <p:commandButton value="Countries-Charges" action="/Admin/CountriesCharges?faces-redirect=true" ajax="false"/>
+                    <p:separator /> 
+                    <p:commandButton value="Areas" action="/Admin/Areas?faces-redirect=true" ajax="false"/>
+                    <p:separator /> 
+                    <p:commandButton value="Profit Centers" action="/Admin/ProfitCenters?faces-redirect=true" ajax="false"/>
+                    <p:separator /> 
+                    <p:commandButton value="Statistics" action="/Admin/Statistics?faces-redirect=true" ajax="false"/>
+                    <p:separator /> 
+                    <p:commandButton value="Account History" action="/Admin/AccountHistory?faces-redirect=true" ajax="false"/>
+                    <p:separator /> 
+                    <p:commandButton value="Monitoring" action="/Admin/Monitor?faces-redirect=true" ajax="false"/>
+                    <p:separator /> 
+                </c:if>
+               
+            </p:toolbarGroup>
+          
+        </p:toolbar>
+    </h:form>
+
+</ui:composition>
